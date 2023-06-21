@@ -30,7 +30,7 @@ create table dms_sample.result_table (
 
 Five parameters are provided as input and the stored procedure handles data movement. The parameters are as follows:
 
-     Table owner - Schema owner<br>
+  Table owner - Schema owner<br>
   Table name - Source table<br>
   Staging table name - Temporary table to hold the archived data<br>
   Archive table name - Table to hold the historical data<br>
