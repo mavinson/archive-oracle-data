@@ -17,7 +17,8 @@ Two database objects are required to log actions from the stored procedure.  Fee
 create sequence dms_sample.order_seq increment by 1 start with 1;
 ```
 
-```create table dms_sample.result_table (
+```
+create table dms_sample.result_table (
      order_id number(38), 
      table_owner varchar2(50), 
      table_name varchar2(50), 
@@ -29,7 +30,7 @@ create sequence dms_sample.order_seq increment by 1 start with 1;
 
 Five parameters are provided as input and the stored procedure handles data movement. The parameters are as follows:
 
-  Table owner - Schema owner <NL>
+  Table owner - Schema owner
   Table name - Source table
   Staging table name - Temporary table to hold the archived data
   Archive table name - Table to hold the historical data
