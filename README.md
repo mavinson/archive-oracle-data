@@ -13,14 +13,17 @@ A sample data set was leveraged for this example.  This data set is provided wit
 
 Two database objects are required to log actions from the stored procedure.  Feel free to change the schema name from DMS_SAMPLE to the schema name of your choice.  The DDL is as follows:
 
-SQL> create sequence dms_sample.order_seq increment by 1 start with 1;
+```
+create sequence dms_sample.order_seq increment by 1 start with 1;
+```
 
-SQL> create table dms_sample.result_table (
+```create table dms_sample.result_table (
      order_id number(38), 
      table_owner varchar2(50), 
      table_name varchar2(50), 
      ddl_string varchar2(2000), 
      ddl_time date);
+```
 
 ## Input parameters
 
@@ -36,7 +39,9 @@ Five parameters are provided as input and the stored procedure handles data move
 
 The following line is an example to call the stored procedure (and don't forget to commit when done).
 
-SQL> execute dms_sample.archive_data('DMS_SAMPLE', 'SPORTING_EVENT_PAR', 'SPORTING_EVENT_STAGING', 'SPORTING_EVENT_ARCHIVE', 365);
+```
+execute dms_sample.archive_data('DMS_SAMPLE', 'SPORTING_EVENT_PAR', 'SPORTING_EVENT_STAGING', 'SPORTING_EVENT_ARCHIVE', 365);
+```
 
 
 ## License
