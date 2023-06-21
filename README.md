@@ -34,14 +34,11 @@ Five parameters are provided as input and the stored procedure handles data move
 
 <li>Table owner - Schema owner</li>
 <li>Table name - Source table</li>
+<li>Staging table name - Temporary table to hold the archived data</li>
+<li>Archive table name - Table to hold the historical data</li>
+<li>Days back to archive - Determines which partitions to archive based on number of days back (i.e., 365 means data older than one year is archived</li>
 </ul>
-
-  Table owner - Schema owner<br>
-  Table name - Source table<br>
-  Staging table name - Temporary table to hold the archived data<br>
-  Archive table name - Table to hold the historical data<br>
-  Days back to archive - Determines which partitions to archive based on number of days back (i.e., 365 means data older than one year is archived)<br>
-
+ 
 ## Usage
 
 The following line is an example to call the stored procedure (and don't forget to commit when done).
