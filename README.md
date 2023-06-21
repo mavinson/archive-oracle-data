@@ -31,13 +31,9 @@ create table dms_sample.result_table (
 Five parameters are provided as input and the stored procedure handles data movement. The parameters are as follows:
 
   Table owner - Schema owner
-  
   Table name - Source table
-  
   Staging table name - Temporary table to hold the archived data
-  
   Archive table name - Table to hold the historical data
-  
   Days back to archive - Determines which partitions to archive based on number of days back (i.e., 365 means data older than one year is archived)
 
 ## Usage
