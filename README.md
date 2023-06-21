@@ -2,7 +2,7 @@
 
 This is an Oracle stored procedure that archives data from an interval partitioned table (source) into another interval partitioned table (archive).  
 
-Interval partitioning can simplify the manageability by automatically creating the new partitions as needed by the data.  Interval partitioning is enabled in the table's definition by defining one or more range partitions and including a specified interval.  The data type that will be partitioned is a date column.  The code below leverages interval partitions based on the month.  When a new month is inserted, a new partition will automatically be created to hold the data.  
+Interval partitioning can simplify the manageability by automatically creating the new partitions as needed by the data.  Interval partitioning is enabled in the table's definition by defining one or more range partitions and including a specified interval.  The data type that will be partitioned is a date column.  The <a href="https://github.com/mavinson/archive-oracle-data/blob/main/archive_data_proc.sql">code</a> leverages interval partitions based on the month.  When a new month is inserted, a new partition will automatically be created to hold the data.  
 
 Most customers would like to leverage interval partitions in the archived table.  This requires moving data from a source table (partitioned) into an interim table (non-partitioned) and then from interim table into the archived table (partitioned).  This dynamic stored procedure performs this task. 
 
